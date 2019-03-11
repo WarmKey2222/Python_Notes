@@ -10,5 +10,7 @@ Record some magic commands or codes!
 6. _(一个下划线)表示操作（命令）的上一个历史，__(两个下划线)表示上两个操作的历史
 7. _34得到第34行输入代码的运行结果
 8. _i34得到第34行输入代码
+9. ![Ipython快捷键](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/pictures_stored/Ipython快捷键.png)
 10. ![常用的魔术命令](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/pictures_stored/Ipython常用的魔术命令.png)
+11. 
 
