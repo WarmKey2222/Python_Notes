@@ -43,13 +43,13 @@ num_np = np.array(num)
 %timeit np.dot(prize_np, num_np)
 # output ：762 ns ± 1.07 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
-np.arange(1,10,0.5) 	#步长可以设置为小数，range()不可以
-np.linspace(0,10,15)	# 0到10分成15份
+np.arange(1,10,0.5) 			#步长可以设置为小数，range()不可以
+np.linspace(0,10,15)			# 0到10分成15份
 
-np.zeros(10, dtype='int')	#全零数组
+np.zeros(10, dtype='int')		#全零数组
 np.zeros((3,5))				#二维全零数组(传元组)
 np.zeros((3,5,10))			#三维全零数组
-np.ones(10)					#全一数组
+np.ones(10)				#全一数组
 
 np.empty(10)				#不会有赋值操作(因此比np.zeros()快)，但产生的数值与之前内存存储值相关，亦可能是随机的
 
@@ -66,18 +66,18 @@ np.round(3.5)	# 4 四舍五入
 a = np.array([6,0])
 b = np.array([2,0])
 c = a/b
-np.isnan(c)		# 有NaN值的位置对应为True
+np.isnan(c)				# 有NaN值的位置对应为True
 # output：array([False,  True])
 # 利用其筛选元素
 c[~np.isnan(c)]
 
 # random模块自带的随机数生成函数
-random.random()					# 返回0-1区间的随机数
+random.random()				# 返回0-1区间的随机数
 random.randint(1,10)			# 返回指定区间1-10的随机数
 random.uniform(1.0,10.0)		# 返回1.0-10.0区间的随机数
 a = [1,2,3,4,5]
-random.shuffle(a)				# 打乱给定列表的顺序
-random.choice(a)				# 从给定列表中随机选一个值
+random.shuffle(a)			# 打乱给定列表的顺序
+random.choice(a)			# 从给定列表中随机选一个值
 
 # numpy模块中的随机数生成函数与之前类似
 np.random.randint(1,10)			# 返回一个指定区间1-10的随机数
