@@ -1,5 +1,5 @@
 # Python_Notes
-Record some magic commands or codes!
+Record some magic commands or review codes!
 # Ipython
 
 1. %run xxx.py 运行python文件
