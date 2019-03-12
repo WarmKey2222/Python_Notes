@@ -82,5 +82,5 @@ random.choice(a)				# 从给定列表中随机选一个值
 # numpy模块中的随机数生成函数与之前类似
 np.random.randint(1,10)			# 返回一个指定区间1-10的随机数
 np.random.randint(1,10,5)		# 返回五个指定区间1-10的随机数
-np.random.randint(1,10,(3,5))	# 返回3x5的数组，指定区间1-10的随机数
+np.random.randint(1,10,(3,5))		# 返回3x5的数组，指定区间1-10的随机数
 ```
