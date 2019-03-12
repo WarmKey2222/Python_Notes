@@ -17,7 +17,6 @@ Record some magic commands or review codes!
 
 ```python
 '''
-测试累加和函数
 检验numpy的高效性
 '''
 def test(a, b):
