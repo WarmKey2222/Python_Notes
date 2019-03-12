@@ -1,7 +1,7 @@
 # Python_Notes
 Record some magic commands or review codes!
 # Ipython
-
+## magic commands
 1. %run xxx.py 运行python文件
 2. 若.py不在当前目录下，在ipython终端可以使用系统命令，比如cd、ls等等；cd 时，可以直接把文件拖到终端窗口，自动生成文件路径（Linux）
 3. %paste 复制粘贴板里的内容至终端（代码）
@@ -84,5 +84,3 @@ np.random.randint(1,10)			# 返回一个指定区间1-10的随机数
 np.random.randint(1,10,5)		# 返回五个指定区间1-10的随机数
 np.random.randint(1,10,(3,5))	# 返回3x5的数组，指定区间1-10的随机数
 ```
-
-
