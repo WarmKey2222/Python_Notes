@@ -83,3 +83,61 @@ np.random.randint(1,10)			# 返回一个指定区间1-10的随机数
 np.random.randint(1,10,5)		# 返回五个指定区间1-10的随机数
 np.random.randint(1,10,(3,5))		# 返回3x5的数组，指定区间1-10的随机数
 ```
+## codes for pandas
+
+```python
+import pandas as pd
+import numpy as np
+a = pd.Series(np.arange(20))
+'''
+修改b,会改变原来a中对应的值
+b = a[10:] 
+b[10] = 222
+此时a[10]变为222
+同样的性质适用于numpy中array的操作
+因此，赋值需谨慎！
+'''
+# 取a中第十个以后的元素，使用copy后，修改b，不会改变原来a中对应的值
+b = a[10:].copy()
+b
+'''
+Out[10]: 
+10    10
+11    11
+12    12
+13    13
+14    14
+15    15
+16    16
+17    17
+18    18
+19    19
+dtype: int64
+'''
+# b[-1],b[0],b[5],b[9]都会出错，因为标签和下标（索引）冲突
+# b[10]不会出错，因为既可以解释为标签也可以解释为下标（索引）
+'''
+如果索引是整数类型，则根据整数进行数据操作时总是面向标签的
+所谓标签，即定义Series或Dataframe时指定的index，默认从0开始计数
+eg：pd.Series(np.arange(5),index=list('abcde'))
+loc			以标签解释
+iloc		以下标解释
+'''
+# 取出b中的第一个元素
+b.loc[10]	#以标签解释
+b.iloc[0]	#以下标解释
+# Dataframe索引和切片，和Series类似
+df = pd.DataFrame({'one':list('1234'),
+                   'two':list('4321')})
+'''
+Out[65]: 
+  one two
+0   1   4
+1   2   3
+2   3   2
+3   4   1
+'''
+# 两种方式取第二列的第一行和第三行的元素
+df.loc[[0,2],'two']		#列以标签解释
+df.iloc[[0,2],1]		#列以下标解释
+```
