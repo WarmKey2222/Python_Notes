@@ -2,4 +2,4 @@
 # Python_Notes
 Record codes related to tensorflow!
 # PyCharm
-## codes for numpy in Ipython
+## codes for tensorflow in Pycharm
