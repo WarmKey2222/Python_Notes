@@ -6,6 +6,8 @@ Record some magic commands or review codes!
 conda create -n mlbook python=3.5 anaconda
 conda activate mlbook
 conda install --channel https://conda.anaconda.org/conda-forge tensorflow
+# optionally install Jupyter extensions
+conda install -n mlbook -c conda-forge jupyter_contrib_nbextensions
 ```
 # Ipython
 ## magic commands
