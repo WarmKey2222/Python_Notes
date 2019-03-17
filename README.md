@@ -1,6 +1,12 @@
 
 # Python_Notes
 Record some magic commands or review codes!
+# Install tensorflow with conda in windows
+```shell
+conda create -n mlbook python=3.5 anaconda
+conda activate mlbook
+conda install --channel https://conda.anaconda.org/conda-forge tensorflow
+```
 # Ipython
 ## magic commands
 1. %run xxx.py 运行python文件
