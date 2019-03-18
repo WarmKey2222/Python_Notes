@@ -150,3 +150,80 @@ Out[65]:
 df.loc[[0,2],'two']		#列以标签解释
 df.iloc[[0,2],1]		#列以下标解释
 ```
+## advancing codes for pandas
+
+```python
+import pandas as pd
+
+'''
+# 时间对象处理
+pd.date_range('2019-01-01', '2019-03-18')
+# freq = H(our),W(eek),B(usiness)
+pd.date_range('2019-01-01', '2019-03-18', freq='W')
+# 每周一
+pd.date_range('2019-01-01', '2019-03-18', freq='W-MON')
+# 产生100个周
+pd.date_range('2019-03-18', periods=100, freq='W')
+'''
+# parse_dates：处理为时间对象
+# 'date'（时间对象）作为索引
+df = pd.read_csv('xxx.csv', index_col='date', parse_dates=['date'])
+
+# 第一步：计算MA
+
+## 方案1：手动计算
+
+df['ma5'] = np.nan		# 5日均值
+df['ma10'] = np.nan		# 10日均值
+
+for i in range (4, len(df)):
+	df.loc[df.index[i],'ma5'] = df.['close'][i-4:i+1].mean()
+
+for i in range (9, len(df)):
+	df.loc[df.index[i],'ma10'] = df.['close'][i-9:i+1].mean()
+	
+
+## 方案2：cumsum
+
+sr = df['close'].cumsum()
+df['ma5'] = (sr - sr.shift(1).fillna(0).shift(4)/5
+df['ma10'] = (sr - sr.shift(1).fillna(0).shift(9)/10
+
+
+## 方案3：rolling
+
+df['ma5'] = df['close'].rolling(5).mean()
+df['ma10'] = df['close'].rolling(10).mean()
+
+# 第二步：找出金叉和死叉节点
+
+df = df.dropna()
+
+## 方案1：直接搜索
+
+golden_cross = []				# ma5 由下往上穿 ma10 
+death_cross = []				# ma5 又上往下穿 ma10
+
+sr = df['ma10']>=df['ma5']		# 返回Bool变量的dataframe
+
+for i in range(1, len(sr)):
+	if sr.iloc[i] == True and sr.iloc[i-1] == False:
+		death_cross.append(sr.index[i])
+	if sr.iloc[i] == False and sr.iloc[i-1] == True:
+		golden_cross.append(sr.index[i])
+		
+## 方案2：shift
+
+death_cross = df[(df['ma10']>=df['ma5'])&(df['ma10']<df.['ma5']).shift(1)].index
+
+golden_cross = df[(df['ma10']<=df['ma5'])&(df['ma10']>df.['ma5']).shift(1)].index
+
+
+'''
+# 其他操作
+df.groupby('col_name')	
+df.groupby('col_name').get_group('foo')	#get rows named 'foo' in group 'colname'
+pd.merge(df1, df2)
+pd.merge(df1, df2, on='col_name')
+'''
+```
