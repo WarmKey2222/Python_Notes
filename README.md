@@ -191,7 +191,6 @@ df['ma10'] = (sr - sr.shift(1).fillna(0).shift(9)/10
 df['ma5'] = df['close'].rolling(5).mean()
 df['ma10'] = df['close'].rolling(10).mean()
 
-
 # 第二步：找出金叉和死叉节点
 
 df = df.dropna()
@@ -200,7 +199,7 @@ df = df.dropna()
 golden_cross = []				# ma5 由下往上穿 ma10 
 death_cross = []				# ma5 又上往下穿 ma10
 
-sr = df['ma10']>=df['ma5']		# 返回Bool变量的dataframe
+sr = df['ma10']>=df['ma5']			# 返回Bool变量的dataframe
 
 for i in range(1, len(sr)):
 	if sr.iloc[i] == True and sr.iloc[i-1] == False:
