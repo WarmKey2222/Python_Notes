@@ -22,7 +22,7 @@ conda install -n mlbook -c conda-forge jupyter_contrib_nbextensions
 9. ![Ipython快捷键](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/pictures_stored/Ipython快捷键.png)
 10. ![常用的魔术命令](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/pictures_stored/Ipython常用的魔术命令.png)
 
-## codes for numpy in Ipython
+## codes for numpy in Ipython :smile:
 
 ```python
 '''
