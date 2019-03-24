@@ -92,7 +92,7 @@ np.random.randint(1,10)			# 返回一个指定区间1-10的随机数
 np.random.randint(1,10,5)		# 返回五个指定区间1-10的随机数
 np.random.randint(1,10,(3,5))		# 返回3x5的数组，指定区间1-10的随机数
 ```
-## codes for pandas
+## codes for pandas :smile:
 
 ```python
 import pandas as pd
