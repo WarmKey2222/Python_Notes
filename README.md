@@ -150,7 +150,7 @@ Out[65]:
 df.loc[[0,2],'two']		#列以标签解释
 df.iloc[[0,2],1]		#列以下标解释
 ```
-## advancing codes for pandas
+## advancing codes for pandas :dart:
 
 ```python
 import pandas as pd
