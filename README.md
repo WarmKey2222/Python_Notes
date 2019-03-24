@@ -1,5 +1,5 @@
 
-# Python_Notes
+# Python_Notes :book:
 Record some magic commands or review codes!
 # Install tensorflow with conda in windows
 ```shell
