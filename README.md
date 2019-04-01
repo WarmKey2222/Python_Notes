@@ -1,7 +1,7 @@
 
 # Python_Notes :book:
 Record some magic commands or review codes!
-# Install tensorflow with conda in windows
+# Install tensorflow with conda in windows :smile:
 ```shell
 conda create -n mlbook python=3.5 anaconda
 conda activate mlbook
