@@ -10,7 +10,7 @@ conda install --channel https://conda.anaconda.org/conda-forge tensorflow
 conda install -n mlbook -c conda-forge jupyter_contrib_nbextensions
 ```
 # Ipython :dart:
-## magic commands
+## magic commands :smirk:
 1. %run xxx.py 运行python文件
 2. 若.py不在当前目录下，在ipython终端可以使用系统命令，比如cd、ls等等；cd 时，可以直接把文件拖到终端窗口，自动生成文件路径（Linux）
 3. %paste 复制粘贴板里的内容至终端（代码）
