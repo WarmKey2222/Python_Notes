@@ -1,6 +1,8 @@
 ## 2019年华为测试题
-```python
+> [**完整代码**](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/测试通过的试题/huawei_test_input_string.py)
 
+> 题目描述如下
+```python
 """
 题目描述：
 --  对输入字符串检查是否存在非法字符，输出合法字符串（去重）和非法字符串（不去重）
