@@ -1,5 +1,5 @@
 ## 2019年华为测试题
-> [**完整代码及相关NOTE**](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/测试通过的试题/huawei_test_input_string.py)
+> [**完整代码及相关NOTE**](https://github.com/pick-up-a-drop-of-water/Python_Notes/blob/master/Tests_Passed/huawei_test_handle_strings.py)
 >
 > 题目描述如下
 ```python
